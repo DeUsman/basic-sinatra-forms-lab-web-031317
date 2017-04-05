@@ -5,9 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
-
+ <h1>Team Name: <%= @params2['Team Name'] %></h1>
+ <% @params2.each do |key, value|%>
+ 	<%if(key != "team_name" && key != "submit")%>
+ 		<h2><%= "#{key}: #{value}" %></h2>
+ 	<% end %>
+ 	<% end %>
  </body>
 </html>
 
